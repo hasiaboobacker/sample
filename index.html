@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala Tourism | God's Own Country</title>
+  <style>
+    :root {
+      --primary: #0f6b48;
+      --primary-dark: #094730;
+      --accent: #d9822b;
+      --bg: #f7faf8;
+      --text: #1c2822;
+      --muted: #586960;
+      --card-bg: #ffffff;
+      --border: #e1eae4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #ffffff;
+      padding: 4.5rem 1.25rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3.5rem 1.25rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .highlights li {
+      background: var(--card-bg);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      border-radius: 6px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .enquiry-form {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      max-width: 600px;
+      display: grid;
+      gap: 1rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #cbd8d0;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 0.8rem 1.4rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--primary-dark);
+    }
+
+    footer {
+      background-color: var(--primary-dark);
+      color: #dcebe3;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">Kerala Tourism</a>
+      <nav>
+        <a href="#destinations">Destinations</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#plan-trip">Plan a Trip</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Explore God's Own Country</h1>
+    <p>
+      From misty Western Ghats hills and tranquil backwaters to golden beaches,
+      living traditions, and coastal flavours across Kerala.
+    </p>
+    <a href="#destinations" class="btn">Explore Destinations</a>
+  </section>
+
+  <section id="destinations">
+    <h2>Popular Destinations</h2>
+    <p class="section-subtitle">Key stops across northern, central, and southern Kerala.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Munnar</h3>
+        <p>Rolling tea plantations, cool mountain air, and misty viewpoints in the Idukki hills.</p>
+      </article>
+      <article class="card">
+        <h3>Alappuzha</h3>
+        <p>Calm backwater canals, traditional kettuvallams (houseboats), and lush paddy fields.</p>
+      </article>
+      <article class="card">
+        <h3>Kochi</h3>
+        <p>Historic Fort Kochi streets, Chinese fishing nets, art galleries, and vibrant cafes.</p>
+      </article>
+      <article class="card">
+        <h3>Wayanad</h3>
+        <p>Forest trails, waterfalls, wildlife sanctuaries, and spice-scented highland estates.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experiences">
+    <h2>Cultural &amp; Nature Experiences</h2>
+    <p class="section-subtitle">What makes travelling through Kerala memorable.</p>
+    <ul class="highlights">
+      <li><strong>Ayurveda &amp; Wellness:</strong> Traditional herbal therapies and calm retreat stays.</li>
+      <li><strong>Performing Arts:</strong> Kathakali, Mohiniyattam, and Kalaripayattu showcases.</li>
+      <li><strong>Malabar &amp; Coastal Cuisine:</strong> Appam, puttu, Malabar biriyani, seafood, and filter coffee.</li>
+      <li><strong>Monsoon &amp; Hill Trails:</strong> Lush greenery, waterfalls, and scenic drive routes.</li>
+    </ul>
+  </section>
+
+  <section id="plan-trip">
+    <h2>Plan Your Trip</h2>
+    <p class="section-subtitle">Share a few details to map out a sample itinerary.</p>
+    <form class="enquiry-form" onsubmit="event.preventDefault(); alert('Trip request noted! Connect this form to your backend or script.js.');">
+      <div>
+        <label for="name">Your Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required />
+      </div>
+      <div>
+        <label for="region">Preferred Region</label>
+        <select id="region">
+          <option value="north">North Kerala (Kozhikode, Wayanad, Kannur)</option>
+          <option value="central">Central Kerala (Kochi, Munnar, Thrissur)</option>
+          <option value="south">South Kerala (Alappuzha, Kumarakom, Varkala)</option>
+        </select>
+      </div>
+      <div>
+        <label for="days">Number of Days</label>
+        <input id="days" type="number" min="1" max="30" value="5" />
+      </div>
+      <div>
+        <label for="notes">Interests</label>
+        <textarea id="notes" rows="3" placeholder="Backwaters, hills, heritage, food..."></textarea>
+      </div>
+      <button type="submit">Request Itinerary</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Kerala Tourism Sample Page &bull; Built for local preview and learning</p>
+  </footer>
+</body>
+</html>
